@@ -10,7 +10,7 @@ Banks goal is protect customer and banking fraud, poses a significant threat. Fi
 
 Credit card fraud detection using machine is a necessity to put proactive monitoring and fraud prevention mechanisms in place. Machine learning is helping financial institute reduce denials of legitimate transactions.
 
-**Exploratory data analytics (EDA): **
+# Exploratory data analytics (EDA): 
 
 **Data Dictionary**
 The dataset was download from here: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
@@ -20,11 +20,9 @@ The data set includes credit card transactions made by European cardholders. Out
 
 All the data columns are numerical columns with no missing values. Around 1081 duplicate rows were in the dataset. After reviewing the Class column (which is 0 for non-fraud and 1 for frad), I see that only 473 row of data were classified as fraud (0.16%). This should that we have a imbalanced dataset. Related to Time column, cannot find any specific pattern or relationshio to Class column. Due that reason, the Time column was dropped from the dataframe.
 
-As part of the analysis process, idenfied skweness and addressed it using PowerTrasformer and displayed the data visually to show the skweness and after the skweness was addressed. 
+As part of the analysis process, idenfied skweness and addressed it using PowerTrasformer and displayed the data visually to show the skweness and after the skweness was addressed. Checkedfor skewness in the data and tried to mitigate it, as it might cause problems during the model-building phase. But at this point the data is still imbalanced.
 
-Check for skewness in the data and try to mitigate it, as it might cause problems during the model-building phase. But at this point the data is still imbalanced.
-
-Train/Test Split: 
+### Train/Test Split: 
 Now we are familiar with the train/test split, which we can perform in order to check the performance of our models with unseen data. Here, for validation, we can use the k-fold cross-validation method. We need to choose an appropriate k value so that the minority class is correctly represented in the test folds.
 
 Model-Building/Hyperparameter Tuning: 
