@@ -1,3 +1,5 @@
+NOTE: The capstone project was changed from House price prediction to Creditcard fraud detection. This was also communicated to my coordinator due to some hardware constrain.
+
 # Credit-Card-Fraud-Detection-Capstone
 
 ## Problem statement
