@@ -13,7 +13,8 @@ Credit card fraud detection using machine is a necessity to put proactive monito
 ## Exploratory data analytics (EDA): 
 
 ### Data Dictionary
-The dataset was download from here: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+The dataset was download from here: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud .
+
 Please create a data folder and download the file to this folder.
 
 ### Data Understanding:
