@@ -34,10 +34,14 @@ to address the imbalanced dataset, I used SMOTE and Random UnderSampling to bala
 The data was split for traning and testing. The first steps was to get the baseline models best parameter and score for LogisticRegression, RandomForestClassifier and DecisionTreeClassifier model. Used the best parameter for all the models to compare the model performance in terms of Accuracy, Precision, Recall, F1 Score, and ROC_AUC. For each model the information was captured in a dataframe and show as output as shown below.
 
 Model Comparison (SMOTE):
+
                  Model  Accuracy  Precision    Recall  F1 Score   ROC AUC
+                 
+                 ---------------------------------------------------------
 0  Logistic Regression  0.967617   0.976502  0.958292  0.967311  0.997549
 1        Random Forest  0.999699   0.999399  1.000000  0.999699  0.999999
 2         DecisionTree  0.998997   0.998298  0.999699  0.998998  0.998997
+
 
 Based on the above informatiob, RandomForestClassifier performed the best. I fined tuned the RandomeForestClassifier with different parameters overfall score remained the same.
 
@@ -45,6 +49,7 @@ Based on the above informatiob, RandomForestClassifier performed the best. I fin
 Repeated the same training on this dataset for learning purpose.
 
 Model Comparison (RandomUnderSampler):
+
                  Model  Accuracy  Precision    Recall  F1 Score   ROC AUC
 0  Logistic Regression  0.882353   0.933333  0.823529  0.875000  0.930796
 1        Random Forest  0.911765   1.000000  0.823529  0.903226  0.934256
@@ -53,10 +58,17 @@ Model Comparison (RandomUnderSampler):
 Based on the above traning SMOTE was a better fit based on the data size.
 
 ### Model-Building/Hyperparameter Tuning: 
-This is the final step at which we can try different models and fine-tune their hyperparameters until we get the desired level of performance on the given dataset. We should try and see if we get a better model by the various sampling techniques.
-
-### Model Evaluation: 
-We need to evaluate the models using appropriate evaluation metrics. Note that since the data is imbalanced it is is more important to identify which are fraudulent transactions accurately than the non-fraudulent. We need to choose an appropriate evaluation metric which reflects this business goal.
+We can try different models and fine-tune their hyperparameters until we get the desired level of performance on the given dataset. 
 
 ### Final model results:
 Will provide additional details once all the model evaluation steps are complete.
+##Model Comparison (SMOTE):
+
+ # Model:Random Forest
+ # Accuracy: 0.999699   
+ # Precision: 0.999399
+ # Recall: 1.000000  
+ # F1 Score: 0.999699  
+ # ROC AUC: 0.999999
+
+ 
