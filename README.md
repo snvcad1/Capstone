@@ -1,4 +1,4 @@
-NOTE: The capstone project was changed from House price prediction to Creditcard fraud detection. This was also communicated to my coordinator due to some hardware constrain.
+## NOTE: The capstone project was changed from House price prediction to Creditcard fraud detection. This was also communicated to my coordinator due to some hardware constrain. Also, the number of records processed in this code are around 50,000 out of 2,84,807 transactions. Again this was done to due to hardware processing constrains. You can change the data size in the code from 50,000 to the level you like to process.
 
 # Credit-Card-Fraud-Detection-Capstone
 
