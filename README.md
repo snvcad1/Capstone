@@ -35,13 +35,11 @@ The data was split for traning and testing. The first steps was to get the basel
 
 Model Comparison (SMOTE):
 
-                 Model  Accuracy  Precision    Recall  F1 Score   ROC AUC
-                 
-                 ---------------------------------------------------------
-0  Logistic Regression  0.967617   0.976502  0.958292  0.967311  0.997549
-1        Random Forest  0.999699   0.999399  1.000000  0.999699  0.999999
-2         DecisionTree  0.998997   0.998298  0.999699  0.998998  0.998997
-
+                | Model               |  Accuracy      |   Precision    | Recall      |  F1 Score   |  ROC AUC     |
+                | Logistic Regression | 0.967617       |   0.976502     | 0.958292    |  0.967311   | 0.997549     | 
+                | Random Forest       | 0.999699       |   0.999399     | 1.000000    |  0.999699   | 0.999999     |
+                | DecisionTree        | 0.998997       |   0.998298     | 0.999699    |  0.998998   | 0.998997     |
+ 
 
 Based on the above informatiob, RandomForestClassifier performed the best. I fined tuned the RandomeForestClassifier with different parameters overfall score remained the same.
 
@@ -50,10 +48,10 @@ Repeated the same training on this dataset for learning purpose.
 
 Model Comparison (RandomUnderSampler):
 
-                 Model  Accuracy  Precision    Recall  F1 Score   ROC AUC
-0  Logistic Regression  0.882353   0.933333  0.823529  0.875000  0.930796
-1        Random Forest  0.911765   1.000000  0.823529  0.903226  0.934256
-2         DecisionTree  0.823529   0.789474  0.882353  0.833333  0.823529
+                | Model               |   Accuracy     |  Precision      | Recall     |  F1 Score   |  ROC AUC     |
+                | Logistic Regression | 0.882353       | 0.933333        | 0.823529   | 0.875000    | 0.930796     | 
+                | Random Forest       | 0.911765       | 1.000000        | 0.823529   | 0.903226    | 0.934256     |
+                | DecisionTree        | 0.823529       | 0.789474        | 0.882353   | 0.833333    | 0.823529     |
 
 Based on the above traning SMOTE was a better fit based on the data size.
 
