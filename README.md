@@ -10,30 +10,53 @@ Predict fraudulent credit card transactions with the help of machine learning mo
 The dataset is taken from the Kaggle website and it has a total of 2,84,807 transactions, out of which 1081 were duplicate and 492 are fraudulent. Since the dataset is highly imbalanced, it needs to be handled before model building.
 
 ## Business Problem Overview
-Banks goal is protect customer and banking fraud, poses a significant threat. Financial losses, trust and credibility are the concerning issue to both banks and customers.
+Banks goal is protect customer and banking fraud, poses a significant threat. Financial losses, trust and credibility are the concerning issue to both banks and customers. It has been estimated That by 2020 the banking frauds would account to $30 billion worldwide. With the rise in digital payment channels, the number of fraudulent transactions is also increasing with new and different ways.
 
 Credit card fraud detection using machine is a necessity to put proactive monitoring and fraud prevention mechanisms in place. Machine learning is helping financial institute reduce denials of legitimate transactions.
+
+## Understanding and Defining Fraud
+Credit card fraud are any dishonest act and behaviour to obtain information without the proper authorization from the account holder for financial gain. Among different ways of frauds, Skimming is the most common one, which is the way of duplicating of information located on the magnetic strip of the card. Apart from this, the other ways are:
+
+Manipulation/alteration of genuine cards
+Creation of counterfeit cards
+Stolen/lost credit cards
+Fraudulent telemarketing
+
+## Configuration 
+Please create a data folder within the source code parent folder and download the data file from kaggle link provided above.
 
 ## Exploratory data analytics (EDA): 
 
 ### Data Dictionary
 The dataset was download from here: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud .
 
-## Configuration 
-Please create a data folder within the source code parent folder and download the data file from kaggle link provided above.
-
-### Data Understanding:
+### Data Understanding ( 50,000 random selection of the data):
 The data set includes credit card transactions made by European cardholders. Out of a total of 50,000 transactions, 83 were fraudulent. This data set is highly unbalanced, with the positive class (frauds) accounting for 0.16% of the total transactions. The data set has also been modified with Principal Component Analysis (PCA) to maintain confidentiality. Apart from ‘time’ and ‘amount’, all the other features (V1, V2, V3, up to V28) are the principal components obtained using PCA. The feature 'time' contains the seconds elapsed between the first transaction in the data set and the subsequent transactions. The feature 'amount' is the transaction amount. The feature 'class' represents class labelling, and it takes the value 1 in cases of fraud and 0 in others.
 
 All the data columns are numerical columns with no missing values. Around 46 duplicate rows were in the dataset. After reviewing the Class column (which is 0 for non-fraud and 1 for frad), I see that only .16% were classified as fraud. This shows that we have a imbalanced dataset. Related to Time column, cannot find any specific pattern or relationshio to Class column. Due that reason, the Time column was dropped from the dataframe.
 
-to address the imbalanced dataset, I used SMOTE and Random UnderSampling to balance the data. 
+## Project Pipeline
+The project pipeline is briefly summarized in the following four steps:
 
-# Train/Test Split: 
+### Data Understanding: 
+Here, we need to load the data and understand the features present in it. This would help us choose the features that we will need for your final model.
+
+### Exploratory data analytics (EDA): 
+Normally, in this step, all the data exploration steps to make sure to address any if there is any skewness in the data and try to mitigate it, as it might cause problems during the model-building phase. Also checked for duplicate records and droped data columns that are not important. To address the imbalanced dataset, used two approaches to balance and used three different modeling techniques to evaluate the overall performance of the model. 
+
+### Train/Test Split: The next step is to check the performance of our 3 models with unseen data after addressing each data balancing method. 
+
+### Model-Building/Hyperparameter Tuning: 
+In the final step tried 3 different models and fine-tune their hyperparameters until we get the desired level of performance on the given dataset. The is to try and see if we get a better model by the various sampling techniques.
+
+### Model Evaluation: 
+We need to evaluate the models using appropriate evaluation metrics. Note that since the data is imbalanced it is is more important to identify which are fraudulent transactions accurately than the non-fraudulent. We need to choose an appropriate evaluation metric which reflects this business goal.
+
+# Technical Details:
 #### Training on the SMOTE dataset
 The data was split for traning and testing. The first steps was to get the baseline models best parameter and score for LogisticRegression, RandomForestClassifier and DecisionTreeClassifier model. Used the best parameter for all the models to compare the model performance in terms of Accuracy, Precision, Recall, F1 Score, and ROC_AUC. For each model the information was captured in a dataframe and show as output as shown below.
 
-Model Comparison (SMOTE):
+##### Model Comparison (SMOTE):
 
                 | Model               |  Accuracy      |   Precision    | Recall      |  F1 Score   |  ROC AUC     |
                 | Logistic Regression | 0.967617       |   0.976502     | 0.958292    |  0.967311   | 0.997549     | 
@@ -46,7 +69,7 @@ Based on the above informatiob, RandomForestClassifier performed the best. I fin
 #### Training on the RandomUnderSAmpler dataset
 Repeated the same training on this dataset for learning purpose.
 
-Model Comparison (RandomUnderSampler):
+#### Model Comparison (RandomUnderSampler):
 
                 | Model               |   Accuracy     |  Precision      | Recall     |  F1 Score   |  ROC AUC     |
                 | Logistic Regression | 0.882353       | 0.933333        | 0.823529   | 0.875000    | 0.930796     | 
@@ -70,3 +93,4 @@ Will provide additional details once all the model evaluation steps are complete
  # ROC AUC: 0.999999
 
  
+
