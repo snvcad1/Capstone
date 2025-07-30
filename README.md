@@ -30,6 +30,9 @@ Please create a data folder within the source code parent folder and download th
 ### Data Dictionary
 The dataset was download from here: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud .
 
+### Source code
+https://github.com/snvcad1/Capstone/blob/main/CreditCard%20Fraud%20Detection-Final.ipynb
+
 ### Data Understanding ( 50,000 random selection of the data):
 The data set includes credit card transactions made by European cardholders. Out of a total of 50,000 transactions, 83 were fraudulent. This data set is highly unbalanced, with the positive class (frauds) accounting for 0.16% of the total transactions. The data set has also been modified with Principal Component Analysis (PCA) to maintain confidentiality. Apart from ‘time’ and ‘amount’, all the other features (V1, V2, V3, up to V28) are the principal components obtained using PCA. The feature 'time' contains the seconds elapsed between the first transaction in the data set and the subsequent transactions. The feature 'amount' is the transaction amount. The feature 'class' represents class labelling, and it takes the value 1 in cases of fraud and 0 in others.
 
